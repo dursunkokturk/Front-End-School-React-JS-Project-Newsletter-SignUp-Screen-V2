@@ -9,12 +9,14 @@
 /* ── CSS CUSTOM PROPERTIES (variables) ── */
 :root {
   --header-height: clamp(380px, 55vw, 600px);
-  --center-top: 50%;
-  --center-left: 50%;
+  --cx: 50%;
+  --cy: 50%;
 }
 
 header {
   position: relative;
+  width: 100%;
+  /* height: var(--header-height); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,34 +24,34 @@ header {
 
 .background {
   position: absolute;
-  top: var(--center-top);
-  left: var(--center-left);
-  transform: translate(-50%, 0%);
+  top: var(--cy);
+  left: var(--cx);
+  transform: translate(-50%, -10px);
   z-index: 1;
 }
 
 .tablet {
   position: absolute;
   z-index: 2;
-  top: var(--center-top);
-  left: var(--center-left);
-  transform: translate(-75%, 40%);
+  top: var(--cy);
+  left: var(--cx);
+  transform: translate(-187px, 87px);
 }
 
 .computer-screen {
   position: absolute;
   z-index: 3;
-  top: var(--center-top);
-  left: var(--center-left);
-  transform: translate(-25%, 15%);
+  top: var(--cy);
+  left: var(--cx);
+  transform: translate(-62px, 36px);
 }
 
 .grafic {
   position: absolute;
   z-index: 4;
-  top: var(--center-top);
-  left: var(--center-left);
-  transform: translate(73%, 33%);
+  top: var(--cy);
+  left: var(--cx);
+  transform: translate(44px, 24px);
 }
 
 .white-background {
@@ -59,23 +61,53 @@ header {
 
   position: absolute;
   z-index: 4;
-  top: var(--center-top);
-  left: var(--center-left);
-  transform: translate(90%, 177%);
+  top: var(--cy);
+  left: var(--cx);
+  transform: translate(72px, 120px);
 }
 
 .ellipse {
   position: absolute;
   z-index: 5;
-  top: var(--center-top);
-  left: var(--center-left);
-  transform: translate(143%, 260%);
+  top: var(--cy);
+  left: var(--cx);
+  transform: translate(82px, 128px);
 }
 
 .number {
   position: absolute;
   z-index: 6;
-  top: var(--center-top);
-  left: var(--center-left);
-  transform: translate(461%, 1170%);
+  top: var(--cy);
+  left: var(--cx);
+  transform: translate(97px, 147px);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  /* margin-top: 40px; */
+}
+
+main h1 {
+  font-family: Roboto;
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 324px;
+  margin-inline: 24px;
+  margin-bottom: 24px;
+}
+
+main h4 {
+  font-family: Roboto;
+  font-weight: 700;
+  margin-inline: 24px;
+
+}
+
+.oval {
+  margin-top: 97px;
+  margin-left: 97px;
 }
