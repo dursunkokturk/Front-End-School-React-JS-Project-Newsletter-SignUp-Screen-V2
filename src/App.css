@@ -13,6 +13,10 @@
   --cy: 50%;
 }
 
+body {
+  font-family: Roboto;
+}
+
 header {
   position: relative;
   width: 100%;
@@ -102,12 +106,58 @@ main h1 {
 
 main h4 {
   font-family: Roboto;
-  font-weight: 700;
+  font-weight: 400;
   margin-inline: 24px;
 
 }
 
-.oval {
-  margin-top: 97px;
-  margin-left: 97px;
+.check-and-write {
+  display: flex;
+  flex-direction: row;
+  margin-inline: 24px;
+}
+
+.check-and-write img {
+  width: 21px;
+  height: 21px;
+}
+
+.check-and-write p {
+  margin-left: 16px;
+}
+
+.check-and-write .oval {
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+.third {
+  margin-right: 161px;
+}
+
+.email {
+  margin-top: 40px;
+  margin-inline: 24px;
+}
+
+.email p {
+  margin-bottom: 8px;
+}
+
+.email input{
+  width: 327px;
+  height: 56px;
+  font-size: 18px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.email button{
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  background-color: #242742;
+  padding: 10px 67px;
+  margin-bottom: 40px;
 }
