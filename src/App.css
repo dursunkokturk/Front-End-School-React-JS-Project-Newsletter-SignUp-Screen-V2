@@ -218,13 +218,67 @@ main h4 {
   margin-bottom: 40px;
 }
 
-/* @media(width>767px) {
+.background-big {
+  display: none;
+}
 
-  main h4 {
-    margin-inline: 200px;
+@media(width>1109px) {
+
+  .background {
+    display: none;
   }
 
-  .check-and-write {
-    margin-inline: 200px;
+  .background-big {
+    display: flex;
   }
-} */
+
+  .tablet {
+    display: none;
+  }
+
+  .tablet-big {
+    display: flex;
+  }
+
+  .computer-screen {
+    display: none;
+  }
+
+  .computer-screen-big {
+    display: flex;
+  }
+
+  .grafic {
+    display: none;
+  }
+
+  .grafic-big {
+    display: flex;
+  }
+
+  .white-background {
+    display: none;
+  }
+
+  .white-background-big {
+    background-color: white;
+    width: 128px;
+    height: 152px;
+  }
+
+  .ellipse {
+    display: none;
+  }
+
+  .ellipse-big {
+    display: flex;
+  }
+
+  .number {
+    display: none;
+  }
+
+  .number-big {
+    display: flex;
+  }
+}
