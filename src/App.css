@@ -300,7 +300,7 @@ main h4 {
     position: absolute;
     top: var(--cy);
     left: var(--cx);
-    transform: translate(112px, -100px);
+    transform: translate(131px, -60px);
   }
 
   .ellipse {
@@ -313,7 +313,7 @@ main h4 {
     z-index: 5;
     top: var(--cy);
     left: var(--cx);
-    transform: translate(151px, -70px);
+    transform: translate(151px, -30px);
   }
 
   .number {
@@ -326,7 +326,7 @@ main h4 {
     z-index: 6;
     top: var(--cy);
     left: var(--cx);
-    transform: translate(180px, -34px);
+    transform: translate(180px, 6px);
   }
   
   main{
