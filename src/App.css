@@ -15,6 +15,7 @@
 
 body {
   font-family: Roboto;
+  background-color: #242742;
 }
 
 header {
@@ -224,12 +225,25 @@ main h4 {
 
 @media(width>1109px) {
 
+  .header-and-main{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: white;
+    width: 928px;
+    height: 641px;
+    border-radius: 36px;
+  }
+
   .background {
     display: none;
   }
 
   .background-big {
     display: flex;
+    position: absolute;
+    top: var(--cy);
+    left: var(--cx);
+    transform: translate(-160px, -300px);
   }
 
   .tablet {
@@ -238,6 +252,11 @@ main h4 {
 
   .tablet-big {
     display: flex;
+    position: absolute;
+    z-index: 1;
+    top: var(--cy);
+    left: var(--cx);
+    transform: translate(-160px, -97px);
   }
 
   .computer-screen {
@@ -246,6 +265,11 @@ main h4 {
 
   .computer-screen-big {
     display: flex;
+    position: absolute;
+    z-index: 2;
+    top: var(--cy);
+    left: var(--cx);
+    transform: translate(-63px, -193px);
   }
 
   .grafic {
@@ -254,6 +278,11 @@ main h4 {
 
   .grafic-big {
     display: flex;
+    position: absolute;
+    z-index: 3;
+    top: var(--cy);
+    left: var(--cx);
+    transform: translate(100px, -203px);
   }
 
   .white-background {
@@ -261,9 +290,15 @@ main h4 {
   }
 
   .white-background-big {
+    display: flex;
+    z-index: 4;
     background-color: white;
     width: 128px;
     height: 152px;
+    position: absolute;
+    top: var(--cy);
+    left: var(--cx);
+    transform: translate(112px, -100px);
   }
 
   .ellipse {
@@ -272,6 +307,11 @@ main h4 {
 
   .ellipse-big {
     display: flex;
+    position: absolute;
+    z-index: 5;
+    top: var(--cy);
+    left: var(--cx);
+    transform: translate(151px, -70px);
   }
 
   .number {
@@ -280,5 +320,11 @@ main h4 {
 
   .number-big {
     display: flex;
+    position: absolute;
+    z-index: 6;
+    top: var(--cy);
+    left: var(--cx);
+    transform: translate(180px, -34px);
   }
+  
 }
