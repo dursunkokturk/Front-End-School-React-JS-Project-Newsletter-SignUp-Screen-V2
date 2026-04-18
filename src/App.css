@@ -271,6 +271,7 @@ main h4 {
     height: 641px;
     border-radius: 36px;
     margin: 20px auto;
+    overflow: hidden;
   }
 
   header{
@@ -373,11 +374,11 @@ main h4 {
 
   main {
     display: flex;
-    height: 370px;
+    /* height: 370px; */
     margin-left: 17px;
     max-width: none;
     width: 50%;
-    height: 100%;
+    /* height: 100%; */
   }
 
   header {
