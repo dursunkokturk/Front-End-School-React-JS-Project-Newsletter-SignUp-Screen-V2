@@ -46,7 +46,7 @@ header {
   z-index: 2;
   top: var(--cy);
   left: var(--cx);
-  transform: translate(-187px, -40px);
+  transform: translate(-187px, -44px);
 }
 
 .computer-screen {
@@ -54,7 +54,7 @@ header {
   z-index: 3;
   top: var(--cy);
   left: var(--cx);
-  transform: translate(-63px, -86px);
+  transform: translate(-63px, -94px);
 }
 
 .grafic {
@@ -62,7 +62,7 @@ header {
   z-index: 4;
   top: var(--cy);
   left: var(--cx);
-  transform: translate(44px, -90px);
+  transform: translate(44px, -100px);
 }
 
 .white-background {
@@ -74,7 +74,7 @@ header {
   z-index: 4;
   top: var(--cy);
   left: var(--cx);
-  transform: translate(72px, 0px);
+  transform: translate(72px, -7px);
 }
 
 .ellipse {
@@ -82,7 +82,7 @@ header {
   z-index: 5;
   top: var(--cy);
   left: var(--cx);
-  transform: translate(82px, 10px);
+  transform: translate(82px, 3px);
 }
 
 .number {
@@ -90,7 +90,7 @@ header {
   z-index: 6;
   top: var(--cy);
   left: var(--cx);
-  transform: translate(97px, 30px);
+  transform: translate(97px, -23px);
 }
 
 main {
