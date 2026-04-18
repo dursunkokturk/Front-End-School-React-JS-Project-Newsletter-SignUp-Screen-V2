@@ -15,13 +15,15 @@
 
 body {
   font-family: Roboto;
-  background-color: #242742;
+  /* background-color: #242742; */
 }
 
 header {
   position: relative;
   width: 100%;
-  /* height: var(--header-height); */
+  height: 320px;
+  overflow: hidden;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,8 +33,12 @@ header {
   position: absolute;
   top: var(--cy);
   left: var(--cx);
-  transform: translate(-50%, -10px);
+  transform: translate(-50%, -124px);
   z-index: 1;
+  width: 375px;
+  height: 284px;
+  object-fit: cover;
+  border-radius: 0 0 16px 16px;
 }
 
 .tablet {
@@ -40,7 +46,7 @@ header {
   z-index: 2;
   top: var(--cy);
   left: var(--cx);
-  transform: translate(-187px, 87px);
+  transform: translate(-187px, -40px);
 }
 
 .computer-screen {
@@ -48,7 +54,7 @@ header {
   z-index: 3;
   top: var(--cy);
   left: var(--cx);
-  transform: translate(-62px, 36px);
+  transform: translate(-63px, -86px);
 }
 
 .grafic {
@@ -56,7 +62,7 @@ header {
   z-index: 4;
   top: var(--cy);
   left: var(--cx);
-  transform: translate(44px, 24px);
+  transform: translate(44px, -90px);
 }
 
 .white-background {
@@ -68,7 +74,7 @@ header {
   z-index: 4;
   top: var(--cy);
   left: var(--cx);
-  transform: translate(72px, 120px);
+  transform: translate(72px, 0px);
 }
 
 .ellipse {
@@ -76,7 +82,7 @@ header {
   z-index: 5;
   top: var(--cy);
   left: var(--cx);
-  transform: translate(82px, 128px);
+  transform: translate(82px, 10px);
 }
 
 .number {
@@ -84,33 +90,33 @@ header {
   z-index: 6;
   top: var(--cy);
   left: var(--cx);
-  transform: translate(97px, 147px);
+  transform: translate(97px, 30px);
 }
 
 main {
-  width: 100%;
   max-width: 375px;
   margin: 0 auto;
+  background-color: white;
+  border-radius: 0 0 16px 16px;
+  padding-top: 24px;
 
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  justify-content: center;
   gap: 16px;
-  /* margin-top: 40px; */
+  padding-bottom: 40px;
+  position: relative;
 }
 
 main h1 {
-  font-family: Roboto;
   font-size: 40px;
   font-weight: 700;
-  margin-top: 324px;
+  margin-top: 40px;
   margin-inline: 24px;
   margin-bottom: 24px;
 }
 
 main h4 {
-  font-family: Roboto;
   font-weight: 400;
   margin-inline: 24px;
 
@@ -198,7 +204,6 @@ main h4 {
 }
 
 .title-and-write h1 {
-  font-family: Roboto;
   font-size: 40px;
   font-weight: 700;
   margin-bottom: 24px;
@@ -223,17 +228,41 @@ main h4 {
   display: none;
 }
 
-@media(width>1109px) {
+.tablet-big {
+  display: none;
+}
 
-  .header-and-main{
+.computer-screen-big {
+  display: none;
+}
+
+.grafic-big{
+  display: none;
+}
+
+.ellipse-big {
+  display: none;
+}
+
+.white-background-big {
+  display: none;
+}
+
+.number-big {
+  display: none;
+}
+
+@media(min-width:1109px) {
+
+  .header-and-main {
     display: flex;
     flex-direction: row-reverse;
     background-color: white;
     width: 928px;
-    height: 641px;
+    /* height: 100vh; */
+    /* height: 641px; */
     border-radius: 36px;
-    margin-inline: auto;
-    height: 100vh;
+    margin: 0 auto;
   }
 
   .background {
@@ -241,7 +270,7 @@ main h4 {
   }
 
   .background-big {
-    display: flex;
+    display: block;
     position: absolute;
     top: var(--cy);
     left: var(--cx);
@@ -253,7 +282,7 @@ main h4 {
   }
 
   .tablet-big {
-    display: flex;
+    display: block;
     position: absolute;
     z-index: 1;
     top: var(--cy);
@@ -266,7 +295,7 @@ main h4 {
   }
 
   .computer-screen-big {
-    display: flex;
+    display: block;
     position: absolute;
     z-index: 2;
     top: var(--cy);
@@ -279,7 +308,7 @@ main h4 {
   }
 
   .grafic-big {
-    display: flex;
+    display: block;
     position: absolute;
     z-index: 3;
     top: var(--cy);
@@ -292,7 +321,7 @@ main h4 {
   }
 
   .white-background-big {
-    display: flex;
+    display: block;
     z-index: 4;
     background-color: white;
     width: 128px;
@@ -308,7 +337,7 @@ main h4 {
   }
 
   .ellipse-big {
-    display: flex;
+    display: block;
     position: absolute;
     z-index: 5;
     top: var(--cy);
@@ -321,17 +350,26 @@ main h4 {
   }
 
   .number-big {
-    display: flex;
+    display: block;
     position: absolute;
     z-index: 6;
     top: var(--cy);
     left: var(--cx);
     transform: translate(180px, 6px);
   }
-  
-  main{
+
+  main {
     display: flex;
     height: 370px;
     margin-left: 17px;
+    max-width: none;
+    width: 50%;
+    height: 100%;
+  }
+
+  header {
+    width: 100%;
+    height: 100%;
+    position: relative;
   }
 }
