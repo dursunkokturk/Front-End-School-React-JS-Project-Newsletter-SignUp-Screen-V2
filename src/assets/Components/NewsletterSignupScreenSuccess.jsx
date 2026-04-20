@@ -2,7 +2,7 @@ import OvalBig from "../img/oval-big.png"
 import CheckBig from "../img/check-big.png"
 import "../../App.css"
 
-export default function NewsletterSignupScreenSuccess({ email,onDismiss }) {
+export default function NewsletterSignupScreenSuccess({ email, onDismiss }) {
   return (
     <>
       <div className="success-container">

@@ -122,6 +122,24 @@ main h4 {
 
 }
 
+.check-and-write {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  padding-inline: 24px;
+}
+
+.check-and-write img {
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+}
+
+.check-and-write p {
+  margin-left: 16px;
+  flex: 1;
+}
+
 .email {
   margin-top: 40px;
   margin-inline: 24px;
@@ -344,6 +362,10 @@ main h4 {
 
   main h4 {
     margin-inline: 0px;
+  }
+
+  .check-and-write {
+    padding-inline: 0;
   }
 
   .email {
