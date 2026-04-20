@@ -5,12 +5,13 @@ import "../src/App.css"
 
 export default function App() {
 
-  const [subscription, setSubscription] = useState(false);
+  const [subscribedEmail, setSubscribedEmail] = useState(false);
 
   return (
     <>
-      {/* Abonelik sonrası başka bir ekran göstermek için: */}
-      {subscription ? <NewsletterSignupScreenSuccess /> : <NewsletterSignupScreen setSubscription={setSubscription} />}
+      {/* Abonelik Icin Girilen E-Mail Bilgisini Aliyoruz
+        Sonra Baska Bir Ekran Gosteriyoruz */}
+      {subscribedEmail ? <NewsletterSignupScreenSuccess email={subscribedEmail} /> : <NewsletterSignupScreen setSubscription={setSubscribedEmail} />}
     </>
   )
 }

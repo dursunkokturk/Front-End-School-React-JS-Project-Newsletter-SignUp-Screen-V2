@@ -49,8 +49,8 @@ export default function NewsletterSignupScreen({ setSubscription }) {
     setError("")
     console.log("Email:", email)
 
+    setSubscription(email)
     setEmail("");
-    setSubscription(true)
   }
 
   return (

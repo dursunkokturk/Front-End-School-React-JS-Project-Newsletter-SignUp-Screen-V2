@@ -122,33 +122,6 @@ main h4 {
 
 }
 
-.check-and-write {
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-  padding-inline: 24px;
-}
-
-.check-and-write img {
-  width: 21px;
-  height: 21px;
-  flex-shrink: 0;
-}
-
-.check-and-write p {
-  margin-left: 16px;
-  flex: 1;
-}
-
-.check-and-write .oval {
-  margin-top: 0px;
-  margin-left: 0px;
-}
-
-/* .third {
-  margin-right: 177px;
-} */
-
 .email {
   margin-top: 40px;
   margin-inline: 24px;
@@ -173,54 +146,6 @@ main h4 {
   color: white;
   background-color: #242742;
   padding: 14px 59px;
-  margin-bottom: 40px;
-}
-
-.check-and-oval {
-  position: relative;
-  /* height: 200px; */
-  margin-top: 149px;
-  margin-bottom: 40px;
-}
-
-.check-and-oval .oval-big {
-  position: absolute;
-  top: 0;
-  left: 24px;
-}
-
-.check-and-oval .check-big {
-  position: absolute;
-  z-index: 1;
-  top: 20px;
-  left: 42px;
-}
-
-.title-and-write {
-  position: absolute;
-  z-index: 1;
-  margin-top: 100px;
-  margin-inline: 24px;
-}
-
-.title-and-write h1 {
-  font-size: 40px;
-  font-weight: 700;
-  margin-bottom: 24px;
-}
-
-.title-and-write h4 {
-  font-weight: 400;
-  margin-bottom: 263px;
-}
-
-.title-and-write button {
-  font-size: 16px;
-  font-weight: 700;
-  padding: 18px 99px;
-  background-color: #242742;
-  color: white;
-  border-radius: 8px;
   margin-bottom: 40px;
 }
 
@@ -421,10 +346,6 @@ main h4 {
     margin-inline: 0px;
   }
 
-  .check-and-write {
-    padding-inline: 0;
-  }
-
   .email {
     margin-top: 16px;
     margin-inline: 0px;
@@ -446,6 +367,70 @@ main h4 {
     margin-bottom: 0;
     width: 100%;
     padding: 14px;
+    cursor: pointer;
+  }
+
+  .success-container {
+    min-height: 100vh;
+    background-color: #36384D;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .success-card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 24px;
+    max-width: 420px;
+    width: 90%;
+
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .icon {
+    position: relative;
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon img:first-child {
+    position: absolute;
+  }
+
+  .icon img:last-child {
+    position: absolute;
+    top: 21px;
+    left: 18px;
+  }
+
+  .success-card h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #242742;
+  }
+
+  .success-card p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #242742;
+  }
+
+  .success-card button {
+    margin-top: 20px;
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+
+    background-color: #242742;
+    color: white;
+    font-weight: 700;
+
     cursor: pointer;
   }
 }
