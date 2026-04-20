@@ -156,6 +156,7 @@ main h4 {
   border: 1px solid grey;
   border-radius: 8px;
   margin-bottom: 24px;
+  transition: border 0.2s ease, background-color 0.2s ease;
 }
 
 .email button {
@@ -196,13 +197,19 @@ main h4 {
 }
 
 .input-error {
-  border: 2px solid red;
+  border: 2px solid #FF6155 !important;
   background-color: #ffe8e6;
+  color: #FF6155;
+}
+
+.email input.input-error {
+  margin-bottom: 4px;   /* ← error-text görününce boşluk azalır */
 }
 
 .error-text {
   color: red;
   font-size: 14px;
+  font-weight: 600;
   margin-bottom: 6px;
   display: block;
 }

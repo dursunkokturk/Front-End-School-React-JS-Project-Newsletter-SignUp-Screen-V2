@@ -51,6 +51,12 @@ export default function NewsletterSignupScreen({ setSubscription }) {
 
     setSubscription(email)
     setEmail("");
+
+    // Kullanicinin Veri Girmeye Basladigi Alanın Hatasini Temizliyoruz
+    setErrors(prev => ({
+      ...prev,
+      [name]: ""
+    }));
   }
 
   return (
@@ -97,7 +103,10 @@ export default function NewsletterSignupScreen({ setSubscription }) {
               <input
                 type="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => {
+                  setEmail(e.target.value)
+                  if (error) setError("")
+                }}
                 placeholder="email@compony.com"
                 className={error ? "input-error" : ""}
               />
