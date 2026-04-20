@@ -203,7 +203,8 @@ main h4 {
 }
 
 .email input.input-error {
-  margin-bottom: 4px;   /* ← error-text görününce boşluk azalır */
+  margin-bottom: 4px;
+  /* ← error-text görününce boşluk azalır */
 }
 
 .error-text {
@@ -399,6 +400,10 @@ main h4 {
     cursor: pointer;
   }
 
+  button:hover {
+    background-color: #FF527B;
+  }
+
   .success-container {
     min-height: 100vh;
     background-color: #36384D;
@@ -461,5 +466,9 @@ main h4 {
     font-weight: 700;
 
     cursor: pointer;
+  }
+
+  .success-card button:hover {
+    background-color: #FF527B;
   }
 }
