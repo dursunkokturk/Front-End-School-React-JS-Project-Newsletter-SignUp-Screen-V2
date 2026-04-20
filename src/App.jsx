@@ -11,7 +11,13 @@ export default function App() {
     <>
       {/* Abonelik Icin Girilen E-Mail Bilgisini Aliyoruz
         Sonra Baska Bir Ekran Gosteriyoruz */}
-      {subscribedEmail ? <NewsletterSignupScreenSuccess email={subscribedEmail} /> : <NewsletterSignupScreen setSubscription={setSubscribedEmail} />}
+      {subscribedEmail ?
+        <NewsletterSignupScreenSuccess
+          email={subscribedEmail}
+          onDismiss={() => setSubscribedEmail(false)}
+        /> :
+        <NewsletterSignupScreen setSubscription={setSubscribedEmail} />
+      }
     </>
   )
 }
