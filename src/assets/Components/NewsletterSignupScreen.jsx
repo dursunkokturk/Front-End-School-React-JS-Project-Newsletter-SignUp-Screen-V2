@@ -51,12 +51,6 @@ export default function NewsletterSignupScreen({ setSubscription }) {
 
     setSubscription(email)
     setEmail("");
-
-    // Kullanicinin Veri Girmeye Basladigi Alanın Hatasini Temizliyoruz
-    setErrors(prev => ({
-      ...prev,
-      [name]: ""
-    }));
   }
 
   return (
