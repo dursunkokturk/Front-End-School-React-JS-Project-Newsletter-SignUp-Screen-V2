@@ -11,9 +11,48 @@ import EllipseBig from "../img/ellipse-big.png"
 import Number from "../img/number.png"
 import NumberBig from "../img/number-big.png"
 import Oval from "../img/oval.png"
-import "../../App"
+import "../../App.css"
+import { useState } from "react"
 
 export default function NewsletterSignupScreen({ setSubscription }) {
+
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  function validate() {
+    if (!email.trim()) {
+      return "E-Mail Boş Bırakılamaz";
+    }
+
+    if (!emailRegex.test(email.trim())) {
+      return "Geçerli Bir E-Mail Giriniz";
+    }
+
+    return "";
+  }
+
+  // setSubscription Parametresi Uzerinden 
+  // Yapilan Islemi Istenilen Yere Gonderiyoruz Yada 
+  // Istenilen Yerde Yazdiriyoruz
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const validationError = validate();
+
+    if (validationError) {
+      setError(validationError)
+      return;
+    }
+
+    setError("")
+    console.log("Email:", email)
+
+    setEmail("");
+    setSubscription(true)
+  }
+
   return (
     <>
       <div className="header-and-main">
@@ -50,10 +89,23 @@ export default function NewsletterSignupScreen({ setSubscription }) {
           </div>
           <div className="email">
             <p>E-posta adresi</p>
-            <input type="email" name="" id="" />
-            <button onClick={() => setSubscription(true)}>
-              Aylık bültene abone olun
-            </button>
+
+            <form onSubmit={handleSubmit}>
+              {/* value Attribute'u Kullanarak 
+            input Elementi Icindeki Data'lara Ulasiyoruz
+            onChange Kullanarak input Elementi Icindeki Degisikligi Aliyoruz */}
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="email@compony.com"
+                className={error ? "input-error" : ""}
+              />
+              {error && <span className="error-text">{error}</span>}
+              <button type="submit">
+                Aylık bültene abone olun
+              </button>
+            </form>
           </div>
         </main>
       </div>

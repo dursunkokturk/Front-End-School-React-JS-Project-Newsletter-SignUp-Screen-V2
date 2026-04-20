@@ -7,17 +7,10 @@ export default function App() {
 
   const [subscription, setSubscription] = useState(false);
 
-  if (subscription) {
-    return (
-      <>
-        <NewsletterSignupScreenSuccess />
-      </>
-    )
-  }
-
   return (
     <>
-      <NewsletterSignupScreen setSubscription={setSubscription}/>
+      {/* Abonelik sonrası başka bir ekran göstermek için: */}
+      {subscription ? <NewsletterSignupScreenSuccess /> : <NewsletterSignupScreen setSubscription={setSubscription} />}
     </>
   )
 }
